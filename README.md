@@ -15,6 +15,8 @@ where &lt;API token> should be replaced by the user's API token. Example of a re
 
     curl -H "Authorization: Token token=138e076dce8a2" http://jobbox-stg.herokuapp.com/api/v1/companies.json
 
+The API token can be found in the Settings section of the user Dashboard (after signing in to http://jobbox.io).
+
 
 Pagination
 ==========
