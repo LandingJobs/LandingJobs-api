@@ -83,7 +83,7 @@ Example response:
 ### Company
 Returns the company with the given id.
 
-URL: `https://jobbox.io/api/v1/companies/[id]`
+URL: `https://www.jobbox.io/api/v1/companies/[id]`
 
 Example response:
 ```JSON
