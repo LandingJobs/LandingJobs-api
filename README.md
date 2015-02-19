@@ -240,7 +240,7 @@ User
 ---
 Returns information of the current user.
 
-URL: `http://jobbox.io/api/v1/user`
+URL: `https://www.jobbox.io/api/v1/user`
 
 Example response:
 ```JSON
