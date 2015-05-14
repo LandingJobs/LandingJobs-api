@@ -1,7 +1,7 @@
-JOBBOX.io API
+Landing.jobs API
 =============
 
-This is a description of the HTTP API made available by JOBBOX.io (http://jobbox.io)
+This is a description of the HTTP API made available by Landing.jobs (https://www.landing.jobs)
 
 
 Authentication
@@ -13,9 +13,9 @@ All requests need authentication. Authentication is done by sending an "Authoriz
 
 where &lt;API token> should be replaced by the user's API token. Example of a request (using cURL) to get the list of Companies:
 
-    curl -H "Authorization: Token token=138e076dce8a2" https://www.jobbox.io/api/v1/companies.json
+    curl -H "Authorization: Token token=138e076dce8a2" https://www.landing.jobs/api/v1/companies.json
 
-The API token can be found in the Settings section of the user Dashboard (after signing in to http://jobbox.io).
+The API token can be found in the Settings section of the user Dashboard (after signing in to http://landing.jobs).
 
 
 Pagination
@@ -29,7 +29,7 @@ string parameters can be use to control and navigate between pages:
 
 The following example retrieves 10 companies starting at index 30:
 
-    curl -H "Authorization: Token token=138e076dce8a2" https://www.jobbox.io/api/v1/companies.json?limit=10&offset=30
+    curl -H "Authorization: Token token=138e076dce8a2" https://www.landing.jobs/api/v1/companies.json?limit=10&offset=30
 
 
 Endpoints
@@ -44,7 +44,7 @@ Companies
 ### List of companies
 Returns the list of companies.
 
-URL: `https://www.jobbox.io/api/v1/companies`
+URL: `https://www.landing.jobs/api/v1/companies`
 
 Example response:
 ```JSON
@@ -83,7 +83,7 @@ Example response:
 ### Company
 Returns the company with the given id.
 
-URL: `https://www.jobbox.io/api/v1/companies/[id]`
+URL: `https://www.landing.jobs/api/v1/companies/[id]`
 
 Example response:
 ```JSON
@@ -104,7 +104,7 @@ Job offers
 ### List of job offers
 Returns the list of job offers.
 
-URL: `https://www.jobbox.io/api/v1/offers`
+URL: `https://www.landing.jobs/api/v1/offers`
 
 Example response:
 ```JSON
@@ -202,7 +202,7 @@ Example response:
 ### Job offers
 Returns the job offer with the given id.
 
-URL: `https://www.jobbox.io/api/v1/offers/[id]`
+URL: `https://www.landing.jobs/api/v1/offers/[id]`
 
 Example response:
 ```JSON
@@ -240,7 +240,7 @@ User
 ---
 Returns information of the current user.
 
-URL: `https://www.jobbox.io/api/v1/user`
+URL: `https://www.landing.jobs/api/v1/user`
 
 Example response:
 ```JSON
@@ -302,7 +302,7 @@ Applications
 ### List of applications
 Returns the list of applications made by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/applications`
+URL: `https://www.landing.jobs/api/v1/user/applications`
 
 Example response:
 ```JSON
@@ -333,7 +333,7 @@ Example response:
 ### Application
 Returns the application with the given id. The application must belong to the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/applications/[id]`
+URL: `https://www.landing.jobs/api/v1/user/applications/[id]`
 
 Example response:
 ```JSON
@@ -356,7 +356,7 @@ Referrals
 ### List of referrals received
 Returns the list of referrals received by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referrals_received`
+URL: `https://www.landing.jobs/api/v1/user/referrals_received`
 
 Example response:
 ```JSON
@@ -386,7 +386,7 @@ Example response:
 ### List of referrals sent
 Returns the list of referrals sent by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referrals_sent`
+URL: `https://www.landing.jobs/api/v1/user/referrals_sent`
 
 Example response:
 ```JSON
@@ -416,7 +416,7 @@ Example response:
 ### Referral
 Returns the referral with the given id. The referral must have been received or sent by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referrals/[id]`
+URL: `https://www.landing.jobs/api/v1/user/referrals/[id]`
 
 Example response:
 ```JSON
@@ -438,7 +438,7 @@ Referral Requests
 ### List of referral requests received
 Returns the list of referral requests received by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referral_requests_received`
+URL: `https://www.landing.jobs/api/v1/user/referral_requests_received`
 
 Example response:
 ```JSON
@@ -466,7 +466,7 @@ Example response:
 ### List of referral requests sent
 Returns the list of referral requests sent by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referral_requests_sent`
+URL: `https://www.landing.jobs/api/v1/user/referral_requests_sent`
 
 Example response:
 ```JSON
@@ -494,7 +494,7 @@ Example response:
 ### Referral request
 Returns the referral request with the given id. The referral request must have been received or sent by the current user.
 
-URL: `https://www.jobbox.io/api/v1/user/referral_requests/[id]`
+URL: `https://www.landing.jobs/api/v1/user/referral_requests/[id]`
 
 Example response:
 ```JSON
