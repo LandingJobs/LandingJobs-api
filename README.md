@@ -432,13 +432,13 @@ Example response:
 ```
 
 
-Referral Requests
------------------
+Recommendation Requests
+-----------------------
 
-### List of referral requests received
-Returns the list of referral requests received by the current user.
+### List of recommendation requests received
+Returns the list of recommendation requests received by the current user.
 
-URL: `https://landing.jobs/api/v1/user/referral_requests_received`
+URL: `https://landing.jobs/api/v1/user/recommendation_requests_received`
 
 Example response:
 ```JSON
@@ -463,10 +463,10 @@ Example response:
 ```
 
 
-### List of referral requests sent
-Returns the list of referral requests sent by the current user.
+### List of recommendation requests sent
+Returns the list of recommendation requests sent by the current user.
 
-URL: `https://landing.jobs/api/v1/user/referral_requests_sent`
+URL: `https://landing.jobs/api/v1/user/recommendation_requests_sent`
 
 Example response:
 ```JSON
@@ -491,10 +491,10 @@ Example response:
 ```
 
 
-### Referral request
-Returns the referral request with the given id. The referral request must have been received or sent by the current user.
+### Recommendation request
+Returns the recommendation request with the given id. The recommendation request must have been received or sent by the current user.
 
-URL: `https://landing.jobs/api/v1/user/referral_requests/[id]`
+URL: `https://landing.jobs/api/v1/user/recommendation_requests/[id]`
 
 Example response:
 ```JSON
@@ -507,3 +507,14 @@ Example response:
     "receiver": "evaluator@example.com"
 }
 ```
+
+
+Deprecated endpoints
+====================
+
+The following endpoints are deprecated and are likely to be removed in the next
+version of the API.
+
+- `https://landing.jobs/api/v1/user/referral_requests_received` (use _recommendation_requests_receveived_ instead)
+- `https://landing.jobs/api/v1/user/referral_requests_sent` (use _recommendation_requests_sent_ instead)
+- `https://landing.jobs/api/v1/user/referral_requests/[id]` (use _recommendation_requests_ instead)
