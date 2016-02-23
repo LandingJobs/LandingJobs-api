@@ -7,7 +7,7 @@ This is a description of the HTTP API made available by Landing.jobs (https://la
 Authentication
 ==============
 
-All requests need authentication. Authentication is done by sending an "Authorization" header with the following format:
+Endpoints that return user-specific data (all endpoints under ``/user``) require authentication. Authentication is done by sending an "Authorization" header with the following format:
 
     Authorization: Token token=<API token>
 
@@ -17,6 +17,7 @@ where &lt;API token> should be replaced by the user's API token. Example of a re
 
 The API token can be found in the Settings section of the user Dashboard (after signing in to http://landing.jobs).
 
+Companies and Job Offers endpoints do not require authentication.
 
 Pagination
 ==========
@@ -96,6 +97,75 @@ Example response:
     "created_at": "2015-02-12T19:01:34.529Z",
     "updated_at": "2015-02-12T19:01:34.529Z"
 }
+```
+
+### Company Offers
+Returns a list of offers for the company with a given id
+
+URL: `https://landing.jobs/api/v1/companies/[id]/offers.json`
+
+Example response:
+```JSON
+```JSON
+[
+    {
+        "id": 1,
+        "city": "East Terry",
+        "company_id": 1,
+        "country_code": "ML",
+        "country_name": "Mali",
+        "currency_code": "EUR",
+        "expires_at": "2015-05-21",
+        "nice_to_have": "Esse veniam vitae. Dolore ipsa sed quam modi quis quidem qui. Culpa facilis illum non. Doloribus est eum sit.",
+        "perks": "Officiis aut fugiat temporibus consequatur perspiciatis sint cumque. Natus veritatis ullam rem nihil voluptas. Assumenda pariatur ullam temporibus. Est ut nisi qui voluptates ab provident. In eligendi praesentium ipsa asperiores similique nisi.",
+        "published_at": "2015-02-09T18:34:30.270Z",
+        "reward": 500,
+        "remote": false,
+        "relocation_paid": false,
+        "role_description": "---\n- Autem nemo quia recusandae harum consequatur eos. Recusandae iure quia modi qui.\n  Repellendus voluptatem dicta illum voluptas impedit deleniti. Enim ipsa ducimus\n  itaque incidunt voluptatem cum. Molestiae saepe nemo qui dolor.\n- Fugit inventore quia. Laboriosam quam ut sint veritatis ut. Similique debitis tempore\n  nulla modi quisquam quae. Vel omnis numquam impedit voluptate dolorem laborum necessitatibus.\n- Numquam reiciendis et id vitae. Molestiae placeat rerum iure. Illum sunt est vel\n  eum. Consequatur sint ut qui voluptas quisquam reiciendis quibusdam.\n",
+        "salary_low": null,
+        "salary_high": null,
+        "successful?": false,
+        "title": "Regional Creative Specialist",
+        "work_from_home": false,
+        "created_at": "2015-02-09T18:34:30.270Z",
+        "updated_at": "2015-02-12T19:01:56.042Z",
+        "type": "Contract",
+        "tags": [
+            "Arduino",
+            "Oberon"
+        ]
+    },
+    {
+        "id": 2,
+        "city": "Port Timothyland",
+        "company_id": 1,
+        "country_code": "ML",
+        "country_name": "Mali",
+        "currency_code": "EUR",
+        "expires_at": "2015-02-11",
+        "nice_to_have": "Amet nemo quia temporibus officiis vero et. Accusamus eum itaque vel facere. Totam neque distinctio recusandae qui. Nulla fuga fugiat quis praesentium temporibus.",
+        "perks": "Quibusdam adipisci aspernatur aut amet dignissimos nihil asperiores. Aut vel repudiandae. Provident dolore sed ullam. Non corporis fugiat voluptatem sunt ex ea. Et aut quaerat porro maxime voluptatem odit.",
+        "published_at": "2015-02-11T13:17:01.621Z",
+        "reward": 900,
+        "remote": false,
+        "relocation_paid": false,
+        "role_description": "---\n- Neque nobis ut enim porro autem. Voluptatem nulla et quia. Tenetur enim fugiat quo\n  praesentium eos amet aliquam. Sit facilis tempore quidem quas explicabo ipsam sed.\n  Ab voluptas id illum molestiae.\n- A assumenda nisi doloribus ab. Dolorum omnis qui modi possimus quod saepe rerum.\n  Animi et ea consequatur.\n- Ut corrupti unde qui. Quia a eius veniam occaecati eum libero dicta. Qui et laudantium.\n  Animi blanditiis et facilis dolores consequatur impedit consequuntur.\n",
+        "salary_low": null,
+        "salary_high": null,
+        "successful?": false,
+        "title": "Dynamic Infrastructure Liason",
+        "work_from_home": false,
+        "created_at": "2015-02-11T13:17:01.621Z",
+        "updated_at": "2015-02-12T19:01:56.042Z",
+        "type": "Part-time",
+        "tags": [
+            "Lisp",
+            "LPC",
+            "xBase"
+        ]
+    }
+]
 ```
 
 Job offers
