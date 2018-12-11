@@ -17,7 +17,7 @@ where &lt;API token> should be replaced by the user's API token. Example of a re
 
 The API token can be found in the Settings section of the user Dashboard (after signing in to http://landing.jobs).
 
-Companies and Job Offers endpoints do not require authentication.
+Companies and Job  endpoints do not require authentication.
 
 Pagination
 ==========
@@ -99,10 +99,10 @@ Example response:
 }
 ```
 
-### Company Offers
-Returns a list of offers for the company with a given id
+### Company jobs
+Returns a list of jobs  for the company with a given id
 
-URL: `https://landing.jobs/api/v1/companies/[id]/offers.json`
+URL: `https://landing.jobs/api/v1/companies/[id]/jobs.json`
 
 Example response:
 ```JSON
@@ -168,13 +168,13 @@ Example response:
 ]
 ```
 
-Job offers
+Jobs
 ----------
 
-### List of job offers
-Returns the list of job offers.
+### List of jobs
+Returns the list of jobs.
 
-URL: `https://landing.jobs/api/v1/offers`
+URL: `https://landing.jobs/api/v1/jobs`
 
 Example response:
 ```JSON
@@ -269,10 +269,10 @@ Example response:
 ```
 
 
-### Job offers
+### Jobs
 Returns the job offer with the given id.
 
-URL: `https://landing.jobs/api/v1/offers/[id]`
+URL: `https://landing.jobs/api/v1/jobs/[id]`
 
 Example response:
 ```JSON
@@ -500,91 +500,3 @@ Example response:
     "updated_at": "2015-02-18T19:01:05.385Z"
 }
 ```
-
-
-Recommendation Requests
------------------------
-
-### List of recommendation requests received
-Returns the list of recommendation requests received by the current user.
-
-URL: `https://landing.jobs/api/v1/user/recommendation_requests_received`
-
-Example response:
-```JSON
-[
-    {
-        "id": 5,
-        "created_at": "2015-02-18T19:03:51.401Z",
-        "updated_at": "2015-02-18T19:03:51.401Z",
-        "offer_id": 22,
-        "sender": "Eva Luator",
-        "receiver": "joe@example.com"
-    },
-    {
-        "id": 6,
-        "created_at": "2015-02-18T19:04:35.058Z",
-        "updated_at": "2015-02-18T19:04:35.058Z",
-        "offer_id": 31,
-        "sender": "Michael Hack",
-        "receiver": "joe@example.com"
-    }
-]
-```
-
-
-### List of recommendation requests sent
-Returns the list of recommendation requests sent by the current user.
-
-URL: `https://landing.jobs/api/v1/user/recommendation_requests_sent`
-
-Example response:
-```JSON
-[
-    {
-        "id": 3,
-        "created_at": "2015-02-18T18:53:36.825Z",
-        "updated_at": "2015-02-18T18:57:24.631Z",
-        "offer_id": 23,
-        "sender": "Joe Guy",
-        "receiver": "evaluator@example.com"
-    },
-    {
-        "id": 4,
-        "created_at": "2015-02-18T18:53:58.325Z",
-        "updated_at": "2015-02-18T18:58:46.485Z",
-        "offer_id": 17,
-        "sender": "Joe Guy",
-        "receiver": "michael@example.com"
-    }
-]
-```
-
-
-### Recommendation request
-Returns the recommendation request with the given id. The recommendation request must have been received or sent by the current user.
-
-URL: `https://landing.jobs/api/v1/user/recommendation_requests/[id]`
-
-Example response:
-```JSON
-{
-    "id": 3,
-    "created_at": "2015-02-18T18:53:36.825Z",
-    "updated_at": "2015-02-18T18:57:24.631Z",
-    "offer_id": 23,
-    "sender": "Joe Guy",
-    "receiver": "evaluator@example.com"
-}
-```
-
-
-Deprecated endpoints
-====================
-
-The following endpoints are deprecated and are likely to be removed in the next
-version of the API.
-
-- `https://landing.jobs/api/v1/user/referral_requests_received` (use _recommendation_requests_receveived_ instead)
-- `https://landing.jobs/api/v1/user/referral_requests_sent` (use _recommendation_requests_sent_ instead)
-- `https://landing.jobs/api/v1/user/referral_requests/[id]` (use _recommendation_requests_ instead)
